@@ -16,3 +16,6 @@ else:
         print("Du har nå", har_epler - gir_epler, "epler igjen.")
     elif a<1:
         print(f'Du har nå 0 epler igjen. Gi meg de {-a} du skylder meg neste gang vi møtes')
+
+
+#jeg hater meg selv
