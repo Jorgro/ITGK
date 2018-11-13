@@ -1,0 +1,6 @@
+g = int(input('Heltall: '))
+f = int(input('Desimaltall: '))
+h = int(input('Ønsket antall desimaler: '))
+j = len(str(f))
+a = int(round(f, -(int(j)-h)))
+print(g+a /(10**int(j)))
