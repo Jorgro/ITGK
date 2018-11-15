@@ -2,10 +2,12 @@
 def load_bin(filename):
     try:
         with open(filename, 'r') as file:
-            binary = file.read()
-            binary.remove('\n')
-            binary.strip()
-        return binary
+           
+            binary_string = ''
+            for line in file:
+                binary_string += line.strip()
+        print(binary_string)
+        return binary_string
     except:
         print("Error: Could not open file " + filename)
 
