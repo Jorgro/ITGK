@@ -75,6 +75,24 @@ def match_liste(skilt, skiltliste):
     return possible
 
 #4f)
+def get_cars(car_dic, skilt, bilinfo):
+    keys = []
+    for key, value in car_dic.items():
+        truth = True
+        if match(key, skilt):
+            for i in range(len(value)-1):
+                if value[i] != bilinfo[i] and bilinfo[i] != '?':
+                    truth = False
+        else:
+            truth = False
+
+
+        if truth:
+            keys.append(key)
+
+    return keys
+
+
 def main():
     bil_dic = {}
 
@@ -87,4 +105,18 @@ def main():
         print('biler.txt does not exist.')
         exit()
 
-    
+    fortsett = True
+    while fortsett:
+        bilinfo = les_inn_bilinfo()
+        skilt = les_gyldig_vitneskilt()
+        biler = get_cars(bil_dic, skilt, bilinfo)
+        if not biler:
+            print('No cars found.')
+        else:
+            for i in biler:
+                print(f'{i} Eier: {bil_dic[i][-1]} ')
+
+        bruker = input('Vil du fortsette? J/N ')
+        if bruker == 'N':
+            fortsett = False
+main()
