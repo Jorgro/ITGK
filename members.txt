@@ -1,0 +1,5 @@
+Frank Stank;D-49334;75;120
+Bjarne Stor;C-49335;95;150
+Dumbo Ear;D-50105;450;750
+Peter Pan;A-12345;30;100
+Santa Claus;D-27261;378;281
