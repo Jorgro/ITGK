@@ -1,0 +1,25 @@
+1a
+2a
+3b
+4a
+5a
+6c
+7c
+8b
+9a - WiFi er et sett av standarder for trådløs overføring. 
+10b
+11b
+12c
+13a
+14b
+15a-
+16d-
+17d-
+18c
+19a
+20c
+
+3a)
+2 
+b) teller elementene opp til n og returnerer antallet som er like (med lik plassering også)
+c) 2^3
