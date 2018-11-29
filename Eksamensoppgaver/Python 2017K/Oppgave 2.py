@@ -1,8 +1,12 @@
 #2a)
 
 def file_to_list(filename):
-    with open(filename, 'r') as file:
-        file_list = file.readlines()
+    try:
+        with open(filename, 'r') as file:
+            file_list = file.readlines()
+    except:
+        print('lmao')
+        return
 
     return_list = []
     for i in file_list:
@@ -28,7 +32,7 @@ def list_stores(dataList):
         if i[0] not in stores:
             stores.append(i[0])
     return stores
-
+dsa
 
 data2 = list_stores(data)
 print(data2)
@@ -74,4 +78,4 @@ def store_analysis(filename):
     print("The ranking of stores according to prices is:")
     for i in range(1, len(data2)+1):
         print(f'{i} {data4[i-1]}')
-store_analysis(data)
+#store_analysis(data)

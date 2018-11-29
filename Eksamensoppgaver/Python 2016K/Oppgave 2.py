@@ -24,7 +24,7 @@ def bin_to_dec(binary):
 
 #2c)
 def dec_to_char(dec):
-    alphabet = ' ,.ABCDEFGHIJKLMNOPQRSTUWXYZÆØÅ'
+    alphabet = ' ,.ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ'
     if dec > 31 or dec < 0:
         return ''
     return alphabet[dec]

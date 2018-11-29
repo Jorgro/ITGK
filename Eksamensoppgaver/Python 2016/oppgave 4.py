@@ -65,10 +65,8 @@ def add_words(streng):
             numberstring_2 = '- '+numberstring+' -'
             strenglist.insert(i+1, numberstring_2)
 
-
-    newstreng = ''
-    for i in strenglist:
-        newstreng += ' ' +i
+    
+    newstreng = ' '.join(strenglist)
 
     return newstreng.strip()
 print(add_words('Mr. X shall pay 9005100 dollars'))

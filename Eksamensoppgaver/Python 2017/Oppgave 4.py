@@ -56,8 +56,7 @@ def genTides():
         j+= 1
     return lowtides, hightides
 lowtides, hightides = genTides()
-print(lowtides[:8])
-print(hightides[:8])
+
 #4d)
 def genTidesStr(tideList):
     stringTides = []
@@ -68,26 +67,29 @@ def genTidesStr(tideList):
     return stringTides
 strLows = genTidesStr(lowtides)
 #4e)
+import sys
+
 def checkTides(dayInMonth):
     lowtides, hightides = genTides()
 
-    seconds1 = dayInMonth*86400 + 9*3600
-    seconds2 = dayInMonth*86400 + 13*3600
-
-    for i in lowtides:
-        if i >= seconds1 and i <= seconds2:
-            time = formatTime(i%86400)
-            print(f"low tide at {time}")
-            exit()
-
-    for i in hightides:
-        if i >= seconds1 and i <= seconds2:
-            time = formatTime(i%86400)
-            print(f"high tide at {time}")
-            exit()
+    seconds1 = (dayInMonth-1)*86400 + 9*3600
+    seconds2 = (dayInMonth-1)*86400 + 13*3600
+    try: 
+        for i in lowtides:
+            if i >= seconds1 and i <= seconds2:
+                time = formatTime(i%86400)
+                print(f"low tide at {time}")
+                exit()
+        for i in hightides:
+            if i >= seconds1 and i <= seconds2:
+                time = formatTime(i%86400)
+                print(f"high tide at {time}")
+                exit()
+    except SystemExit:
+        return
 
     print("no tides")
-
+checkTides(24)
 #4f)
 
 def listTides():

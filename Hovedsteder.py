@@ -51,18 +51,7 @@ def spm(liste):
     return liste
 
 
-class Dick:
 
-    def __init__(self, length, width):
-        self.length = length
-        self.width = width
-    
-    def calculator(self):
-        print(self.length*(self.width/2)**2 *3.14)
-    
-    def __repr__(self):
-        str_2 = '-'*self.length
-        return f'{str_2}:'
 
 Josteins = Dick(2, 1)
 Josteins.calculator()
@@ -76,7 +65,7 @@ def liste_til_dic(liste):
 
     return dic
 
-print(liste_til_dic(hoved2))
+#print(liste_til_dic(hoved2))
 
 def rover(tekst):
 
@@ -91,7 +80,7 @@ def rover(tekst):
 
     return new
 
-print(rover('ITGK er kult'))
+#print(rover('ITGK er kult'))
 
 def unrover(tekst): 
     kons = 'bcdfghjklmnpqrstvwxz'
@@ -107,5 +96,5 @@ def unrover(tekst):
 
     return new
 
-print(unrover('ITotGogKok eror kokuloltot'))
+#print(unrover('ITotGogKok eror kokuloltot'))
 

@@ -1,0 +1,33 @@
+1a
+2c
+3b
+4c
+5x
+6d
+7a
+8a
+9b
+10d
+11a
+12b
+13c
+14d
+15c
+16c
+17b
+18c
+19a
+20a
+
+n = lengde av streng
+for c i streng:
+r = antall bokstaver
+s = antall tall
+t = antall mellomrom
+u = antall annet
+
+r = 15*100/20 = 75, s = 0, t = 20, u = 5
+
+
+3a) 10
+b) 
