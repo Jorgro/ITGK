@@ -86,7 +86,6 @@ showResults(analyzed)
 
 #4f)
 def savePoints(team_data):
-    print(list(team_data.items()))
     sorted_data = sorted(team_data.items(), key =lambda elem: elem[1][0], reverse = True)
     with open('Points.txt', 'a+') as file:
         file.write('#'*35 + '\n')
