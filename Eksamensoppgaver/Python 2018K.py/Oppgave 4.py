@@ -99,3 +99,19 @@ def savePoints(team_data):
     
         
 savePoints(anal)
+
+def getkey(item):
+    return item[1][0]
+
+hey = [(1, 2), (4, 5), (7, 8), (1, -1)]
+
+hey = sorted(hey, key = getkey, reverse = True)
+print(hey)
+
+getk = lambda elem: elem[1] 
+hey = sorted(hey, key=getk)
+print(hey)
+summation = lambda x, y: x+y
+
+print(summation(1, 3))
+
