@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 def test_prime(number):
     for i in range(2, round(number**1/2)+1):
@@ -116,7 +117,28 @@ from functools import reduce
 
 
 
+=======
+def primes(number):
+    primes_list = []
+    for i in range(2, number+1):
+        if (number%i) == 0:
+            primes_list.append(i)
+            break
+            primes(int(number/i))
+>>>>>>> f6cdb6adfc71819f359dd16d78729eac2b1e686d
 
 
+<<<<<<< HEAD
 
 #521 er det høyeste primtallet som er med i en 24 lang primtallsfaktoriseringkonfigurasjon
+=======
+def juletall():
+    jul = 0
+    for i in range(16000000, 4294967296):
+        if primes(i) == 24:
+            jul += 1
+        print(jul)
+    return jul
+
+print(juletall())
+>>>>>>> f6cdb6adfc71819f359dd16d78729eac2b1e686d
