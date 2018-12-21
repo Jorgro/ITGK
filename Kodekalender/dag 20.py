@@ -7,4 +7,52 @@ numbers = [7096, 3, 3924, 2404, 4502, 4800, 74, 91, 9, 7, 9, 6790, 5, 59, 9, 48,
 27, 2523, 266, 101, 8, 3058, 7, 56, 6961, 46, 199, 866, 4, 184, 4, 9675, 92]
 
 string_numbers = [str(e) for e in numbers]
-print(string_numbers)
+#lage rekursiv sorterings funksjon: sorterer først på 1. indeks, så andre, så tredje... 
+# Sorterer basert på verdien til indeksen (ser bare på den relevante indeksen)
+
+
+
+def recursive_sort(liste):
+    concatenate = [[] for e in range(9)]
+    for i in liste:
+        #print(i)
+        truth = True
+        for index, value in enumerate(concatenate[9-int(i[0])]):
+            truth, number = recursive(value, i)
+            if number == i:
+                concatenate[9-int(i[0])].insert(index, i)
+            if not truth:
+                break
+        if truth: 
+            concatenate[9-int(i[0])].append(i)
+        #print(concatenate)
+    
+    return concatenate
+
+def recursive(number1, number2):
+    j = number1[0]
+
+    orig1 = number1
+    orig2 = number2
+
+    while len(number1) < 4:
+        number1 += j
+    while len(number2) < 4:
+        number2 += j
+    
+    if int(number2) >= int(number1):
+        return False, orig2
+    return True, orig1
+
+helo = recursive_sort(string_numbers)
+string = ''
+for liste in helo:
+    for i in liste:
+        string += i
+
+print(string)
+
+
+
+
+        
